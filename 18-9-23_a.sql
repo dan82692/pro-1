@@ -1,0 +1,23 @@
+use cdac1;
+select truncate(45.34,1),floor(45.34),round(45.33,0),ceil(45.33);
+desc jobs;
+select street_address from locations;
+select street_address,substring_index(street_address,' ',-2) from locations;
+select min_salary,max_salary,lpad(min_salary,10,'0'),lpad(max_salary,10,'0') from jobs;
+/* DATE FUNCTIONS */
+select sysdate(),now();
+select curdate(),curtime();
+select hire_date,round(datediff(curdate(),hire_date)/365) from employees;
+select DATE_ADD('2021-12-01',INTERVAL 30 DAY);
+select hire_date,date_add(hire_date,INTERVAL 30 DAY),date_sub(hire_date,INTERVAL 30 DAY) from employees;
+select hire_date,date_add(hire_date,INTERVAL 2 MONTH),date_sub(hire_date,INTERVAL 2 MONTH) from employees;
+select hire_date,date_add(hire_date,INTERVAL 1 YEAR),date_sub(hire_date,INTERVAL 1 YEAR) from employees;
+select DATE_FORMAT('2021-11-28 15:12:54','%D-%M-%Y %H:%i:%S');
+select dayname('2023-09-19');
+select dayofweek(curdate());
+select extract(year from curdate());
+select hire_date,extract(month from hire_date) hire_month from employees;
+select last_day('2023-09-01');
+select to_days(curdate());
+select from_days(739146);
+select date_format(sysdate(),'%d-%m-%y %H:%i:%S');
