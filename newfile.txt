@@ -1,2 +1,6 @@
 my name is danish
+<<<<<<< HEAD
 i am doing pg dac
+=======
+danish is my name
+>>>>>>> db02e1a2ef6c4c031ac18e5245091fce480f2544
